@@ -1,16 +1,14 @@
-## Hi there 👋
+# 🐾 Passionate Pet Pros
 
-<!--
-**passionatepetpros/PassionatePetPros** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Welcome to **Passionate Pet Pros**!
+A beachy, Florida-inspired pet sitting and walking company bringing fun, care, and professionalism to your furry (and not-so-furry) friends. This repository powers our official website, hosted via **GitHub Pages**.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🌴 About Us
+Passionate Pet Pros was built on love for animals, sunshine vibes, and a mission to make pet care stress-free for owners.
+We specialize in:
+- 🐕 Dog walking
+- 🐈 Cat sitting
+- 🐢 Exotic & small pet care
+- 🌊 A touch of coastal charm
