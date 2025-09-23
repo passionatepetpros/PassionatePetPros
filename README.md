@@ -1,14 +1,20 @@
-# 🐾 Passionate Pet Pros
+# Passionate Pet Pros
 
-Welcome to **Passionate Pet Pros**!
-A beachy, Florida-inspired pet sitting and walking company bringing fun, care, and professionalism to your furry (and not-so-furry) friends. This repository powers our official website, hosted via **GitHub Pages**.
+A simple, clean static website for a pet care business, built for GitHub Pages.
 
----
+## Pages
+- `index.html` — Home
+- `about.html` — About Me
+- `services.html` — Services & Pricing
+- `booking.html` — New Client Booking Request (Formspree-ready)
 
-## 🌴 About Us
-Passionate Pet Pros was built on love for animals, sunshine vibes, and a mission to make pet care stress-free for owners.
-We specialize in:
-- 🐕 Dog walking
-- 🐈 Cat sitting
-- 🐢 Exotic & small pet care
-- 🌊 A touch of coastal charm
+## Quick Start
+1. Upload all files to your GitHub repo.
+2. In **Settings → Pages**, set **Source: Deploy from a branch**, choose `main` and `/ (root)`.
+3. (Optional) In **Settings → Pages**, set your custom domain and enable **Enforce HTTPS**.
+4. In `booking.html`, replace `YOUR_FORMSPREE_ID` with your Formspree endpoint.
+
+## Customize
+- Update colors in `style.css` (CSS variables at top).
+- Replace the logo in `assets/logo.svg` and favicon in `assets/favicon.svg`.
+- Edit copy and prices on each page.

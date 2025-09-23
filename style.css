@@ -1,0 +1,88 @@
+/* Passionate Pet Pros — modern, responsive styles */
+:root {
+  --primary: #0fb9b1;
+  --accent: #ff9f1c;
+  --secondary: #ffe66d;
+  --dark: #0a2a33;
+  --light: #f7fbfc;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, Noto Sans, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: var(--dark);
+  background: var(--light);
+  line-height: 1.6;
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.site-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: 1rem 1.25rem; position: sticky; top: 0;
+  background: rgba(255,255,255,0.8); backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.05); z-index: 10;
+}
+.brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; }
+.brand img { height: 36px; width: 36px; }
+.nav a { margin: 0 .5rem; padding: .5rem .75rem; border-radius: 10px; }
+.nav a.cta { background: var(--primary); color: white; }
+.nav a.cta:hover { opacity: 0.9; }
+
+.hero { position: relative; padding: clamp(3rem, 6vw, 6rem) 1.25rem; overflow: hidden; }
+.hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.1; margin: 0 0 .6rem 0; }
+.lead { font-size: clamp(1rem, 2.6vw, 1.25rem); max-width: 60ch; }
+.hero-actions { display: flex; gap: .75rem; margin-top: 1rem; flex-wrap: wrap; }
+.btn { display: inline-block; padding: .8rem 1.1rem; border-radius: 12px; border: 2px solid var(--primary); font-weight: 700; }
+.btn.primary { background: var(--primary); color: #fff; }
+.btn.ghost { background: transparent; color: var(--primary); }
+
+.hero-art {
+  position: absolute; inset: -20% -10% auto -10%; height: 120%;
+  background: radial-gradient(60% 60% at 70% 30%, rgba(15,185,177,0.35), transparent 60%),
+              radial-gradient(40% 40% at 20% 70%, rgba(255,159,28,0.35), transparent 60%),
+              linear-gradient(180deg, rgba(10,42,51,0.06), transparent);
+  filter: blur(30px);
+  z-index: 0;
+}
+
+.grid { display: grid; gap: 1rem; padding: 1.25rem; max-width: 1100px; margin: 0 auto; }
+.grid.three { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.card { background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius); padding: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.04); }
+
+.panel { padding: 3rem 1.25rem; }
+.panel.alt { background: linear-gradient(180deg, rgba(15,185,177,0.08), rgba(255,159,28,0.08)); }
+.panel .panel-inner { max-width: 1100px; margin: 0 auto; }
+.panel h2 { margin-top: 0; }
+
+.content { max-width: 1100px; margin: 0 auto; padding: 1.25rem; }
+.content.narrow { max-width: 800px; }
+
+.checklist li::marker { content: "✔ "; color: var(--primary); }
+
+.price-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.price-card { background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius); padding: 1rem; }
+.price-card .price { font-weight: 800; font-size: 1.4rem; color: var(--dark); }
+
+.notice { background: #fff9e6; border: 1px solid #ffe8a3; padding: .8rem 1rem; border-radius: 10px; margin-top: 1rem; }
+
+.form { display: grid; gap: .8rem; }
+.form label { display: grid; gap: .4rem; font-weight: 600; }
+.form input, .form textarea, .form select {
+  padding: .8rem 1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.15); background: white;
+}
+.form button { margin-top: .5rem; }
+
+.site-footer {
+  padding: 2rem 1.25rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;
+  border-top: 1px solid rgba(0,0,0,0.06); background: #fff;
+}
+.foot-nav a { margin-right: .75rem; }
+
+.center { display: grid; place-items: center; min-height: 100dvh; }
