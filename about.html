@@ -1,58 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About • Passionate Pet Pros</title>
-<meta name="description" content="Florida-inspired pet sitting & walking with reliable, compassionate care for dogs, cats, and small pets." />
-<meta name="theme-color" content="#0fb9b1" />
-<link rel="canonical" href="https://yourusername.github.io/passionatepetpros/about.html" />
-<link rel="stylesheet" href="style.css" />
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<!-- ===== ABOUT ME + GALLERY (with Lightbox) ===== -->
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    Hi, I’m Kim! I’m the owner of <strong>Passionate Pet Pros, LLC</strong>. I grew up in New Jersey and now call Port Charlotte, FL home.
+  </p>
+  <p>
+    Throughout the years, I’ve had several pets (some of them below ❤️) as part of my family. Before moving to Florida, I helped out with a friend’s pet sitting and dog walking business in NJ. That’s when I realized how much I truly loved it. That experience pushed me to follow my passion and start my own company.
+  </p>
+  <p>
+    When I’m looking after your pets, they’ll be treated just like my own. Along with being fully licensed and bonded, I am comfortable administering medicine and shots so your pets get everything they need. My goal is to give you peace of mind knowing they’re happy, safe, and loved while you’re away.
+  </p>
 
-</head>
-<body>
-<header class="site-header">
-  <a href="index.html" class="brand">
-    <img src="assets/logo.svg" alt="Passionate Pet Pros logo" />
-    <span class="brand-text">Passionate Pet Pros</span>
-  </a>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a class="cta" href="booking.html">Book Now</a>
-  </nav>
-</header>
-<main class="content narrow">
-  <h1>About Me</h1>
-  <p>Hi! I’m Kim, the heart behind <strong>Passionate Pet Pros</strong>. I started this business to bring dependable, pet-first care to my community. Inspired by Florida’s sunshine and ocean calm, I blend professionalism with play—so your pets feel safe, enriched, and loved.</p>
-
-  <h2>My Values</h2>
-  <ul class="checklist">
-    <li>Pet-first, always</li>
-    <li>Trust, transparency, and communication</li>
-    <li>Reliability and safety</li>
-    <li>Fun, enrichment, and positive reinforcement</li>
-  </ul>
-
-  <h2>Experience</h2>
-  <p>From puppies to seniors, medication administration to special needs, I’ve supported a wide range of pets and personalities. I’m fully insured and background-checked.</p>
-
-  <div class="card">
-    <p><strong>Email:</strong> hello@passionatepetpros.com<br/>
-    <strong>Phone:</strong> +1 (000) 000-0000</p>
+  <h3 class="gallery-title">My Pet Gallery</h3>
+  <div class="gallery">
+    <img loading="lazy" src="1F86C5D6-006F-441A-ADC1-E8D9FBD09C65.jpeg" alt="Photo 1">
+    <img loading="lazy" src="40C26104-80A2-4AC0-87D8-722186A71098.jpeg" alt="Photo 2">
+    <img loading="lazy" src="F2B05F97-1685-478E-A9D2-753201CEF201.jpeg" alt="Photo 3">
+    <img loading="lazy" src="E6818186-64F2-4DEE-B34B-662EF7211157.jpeg" alt="Photo 4">
   </div>
-</main>
-<footer class="site-footer">
-  <p>© <span id="year"></span> Passionate Pet Pros. All rights reserved.</p>
-  <nav class="foot-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="booking.html">Booking</a>
-  </nav>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="lb" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <img id="lbImg" alt="">
+</div>
+
+<style>
+  .about { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+  .gallery-title { margin-top: 30px; color: #007C7A; }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+  }
+  .gallery img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: zoom-in;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    transition: transform .2s ease;
+  }
+  .gallery img:hover { transform: scale(1.01); }
+
+  /* Lightbox */
+  .lb {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.8);
+    display: none; align-items: center; justify-content: center;
+    z-index: 9999; padding: 24px;
+  }
+  .lb.open { display: flex; }
+  .lb img {
+    max-width: min(100%, 1100px);
+    max-height: 90vh;
+    width: auto; height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  }
+  .lb-close {
+    position: absolute; top: 14px; right: 18px;
+    font-size: 40px; line-height: 1;
+    background: transparent; border: 0; color: #fff;
+    cursor: pointer; padding: 4px 10px;
+  }
+</style>
+
+<script>
+  (function () {
+    const gallery = document.querySelector('.gallery');
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbClose = document.getElementById('lbClose');
+
+    function openLB(src, alt) {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLB() {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    gallery.addEventListener('click', (e) => {
+      if (e.target.tagName === 'IMG') {
+        openLB(e.target.src, e.target.alt);
+      }
+    });
+    lb.addEventListener('click', (e) => {
+      if (e.target === lb) closeLB(); // click outside image
+    });
+    lbClose.addEventListener('click', closeLB);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLB();
+    });
+  })();
+</script>
