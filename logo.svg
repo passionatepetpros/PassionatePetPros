@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Passionate Pet Pros logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0fb9b1"/>
+      <stop offset="1" stop-color="#ff9f1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#g)"/>
+  <g fill="#fff">
+    <circle cx="180" cy="220" r="32"/>
+    <circle cx="332" cy="220" r="32"/>
+    <path d="M128 300c40 40 216 40 256 0 10-10 28 6 18 18-72 82-220 82-292 0-10-12 8-28 18-18z"/>
+  </g>
+</svg>
