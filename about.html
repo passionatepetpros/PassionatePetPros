@@ -48,53 +48,14 @@
 
 
 
-  <!-- Lightbox Modal -->
-  <div class="lb" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
-    <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
-    <img id="lbImg" alt="">
-  </div>
+<footer class="site-footer">
 
-  <script>
-    (function () {
-      const gallery = document.querySelector('.gallery');
-      const lb = document.getElementById('lightbox');
-      const lbImg = document.getElementById('lbImg');
-      const lbClose = document.getElementById('lbClose');
 
-      function openLB(src, alt) {
-        lbImg.src = src;
-        lbImg.alt = alt || '';
-        lb.classList.add('open');
-        lb.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeLB() {
-        lb.classList.remove('open');
-        lb.setAttribute('aria-hidden', 'true');
-        lbImg.src = '';
-        document.body.style.overflow = '';
-      }
-
-      gallery.addEventListener('click', (e) => {
-        if (e.target.tagName === 'IMG') {
-          openLB(e.target.src, e.target.alt);
-        }
-      });
-      lb.addEventListener('click', (e) => {
-        if (e.target === lb) closeLB(); // click outside image
-      });
-      lbClose.addEventListener('click', closeLB);
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeLB();
-      });
-    })();
   </script>
 </body>
 </html>
   </div>
-</main>
-<footer class="site-footer">
-  <p>© <span id="year"></span> Passionate Pet Pros. All rights reserved.</p>
+</main>pan id="year"></span> Passionate Pet Pros. All rights reserved.</p>
   <nav class="foot-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
