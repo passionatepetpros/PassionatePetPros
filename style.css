@@ -1,187 +1,12 @@
-
+/* Global */
 body {
   font-family: 'Trebuchet MS', sans-serif;
   margin: 0;
-  padding: 0;
+  color: #333;
   background-color: #fdfdfd;
-  color: #333;
 }
 
-header {
-  background-color: #008080;
-  color: #fff;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-header .logo {
-  max-height: 80px;
-}
-header h1 {
-  margin: 0;
-  font-size: 1.8em;
-}
-header nav a {
-  margin: 0 12px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-header nav a:hover {
-  background: linear-gradient(45deg, #008080, #ff7f50);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero {
-  text-align: center;
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #008080, #ff7f50);
-  color: #fff;
-}
-.hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-}
-.cta-button {
-  background: linear-gradient(45deg, #ff7f50, #008080);
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 1.1em;
-  transition: opacity 0.3s;
-}
-.cta-button:hover {
-  opacity: 0.85;
-}
-
-main {
-  padding: 20px;
-}
-
-
-
-.service-card {
-  background: #ffffff;
-  border: 2px solid #008080;
-  margin: 20px auto;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 600px;
-}
-.service-card h2 {
-  margin-top: 0;
-}
-.service-card ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.notes {
-  font-size: 0.9em;
-  margin: 30px auto;
-  max-width: 600px;
-  color: #333;
-}
-.notes h3 {
-  background: linear-gradient(45deg, #ff7f50, #008080);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 5px;
-}
-.notes ul {
-  list-style-type: square;
-  margin-left: 20px;
-}
-
-hr {
-  border: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #008080, #ff7f50);
-  border-radius: 2px;
-  margin: 20px 0;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-  margin: 20px 0;
-}
-.gallery img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  border: 2px solid transparent;
-  background-image: linear-gradient(45deg, #008080, #ff7f50);
-  background-origin: border-box;
-}
-
-footer {
-  background-color: #008080;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  position: relative;
-}
-footer p {
-  margin: 5px 0;
-}
-
-
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-.booking-form label {
-  margin: 5px 0 2px;
-  font-weight: bold;
-  background: linear-gradient(45deg, #008080, #ff7f50);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.booking-form input, .booking-form select, .booking-form textarea {
-  margin-bottom: 12px;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  font-size: 1em;
-  transition: border-color 0.3s;
-}
-.booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus {
-  border-color: #008080;
-  outline: none;
-}
-.booking-form button {
-  background: linear-gradient(45deg, #ff7f50, #008080);
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1.1em;
-  transition: opacity 0.3s;
-}
-.booking-form button:hover {
-  opacity: 0.85;
-}
-
-
-/* Top contact bar (home page only) */
+/* Top contact bar (Home only) */
 .top-contact {
   background-color: #008080;
   color: #ffffff;
@@ -190,96 +15,32 @@ footer p {
   font-size: 0.95em;
 }
 
-
-/* Soft light teal gradient page background */
-.soft-teal-bg {
-  background: linear-gradient(180deg, #eaf7f7 0%, #ffffff 60%);
-}
-
-/* Hero typography updates */
-.site-title {
-  font-size: 3rem;
-  margin: 0.2em 0 0.1em;
-  color: #ffffff; /* white on gradient hero for contrast */
-  letter-spacing: 0.5px;
-}
-.tagline, .slogan {
-  margin: 0.2em 0;
-  font-size: 1.1rem;
-  color: #ffffff; /* solid white text (no gradient) */
-}
-
-/* Two images in hero */
-.hero-photos {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(120px, 220px));
-  gap: 14px;
-  justify-content: center;
+/* Header */
+header {
+  background-color: #008080;
+  color: #fff;
+  padding: 12px 18px;
+  display: flex;
   align-items: center;
-  margin: 18px 0 24px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.hero-photos img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+.small-logo { max-height: 60px; }
+header nav a {
+  margin: 0 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
+header nav a:hover { color: #ff7f50; }
 
-/* About page text coloring (no gradient on text) */
-.about-content p {
-  color: #008080; /* teal paragraphs */
-  line-height: 1.65;
-  font-size: 1.05rem;
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #008080, #ff7f50);
+  color: #fff;
 }
-.about-content p strong, .about-content p em, .about-content p span.highlight {
-  color: #ff7f50; /* orange emphasis */
-}
-
-/* About page horizontal services row */
-.about-services-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin: 24px 0;
-}
-@media (max-width: 800px) {
-  .about-services-row { grid-template-columns: 1fr; }
-}
-.service-mini {
-  background: #ffffff;
-  border: 2px solid #008080;
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-.service-mini h3 {
-  margin-top: 0;
-  color: #008080; /* solid teal text */
-}
-.service-mini ul {
-  margin-left: 18px;
-  list-style: disc;
-}
-
-/* Footer copyright is already set globally in HTML */
-
-/* Horizontal layout for main service cards */
-.services-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin: 20px auto;
-  max-width: 1000px;
-}
-@media (max-width: 900px) {
-  .services-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Ensure clear hierarchy on hero */
 .site-title {
   font-size: 3rem;
   margin: 0.2em 0 0.1em;
@@ -291,20 +52,67 @@ footer p {
   margin: 6px 0 14px;
   color: #ffffff;
 }
+.hero-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 380px));
+  gap: 16px;
+  justify-content: center;
+  margin: 16px auto 8px;
+}
+.hero-photos img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
 .slogan {
   font-size: 2rem;
   font-weight: 800;
   color: #ffffff;
-  margin: 18px 0 14px;
+  margin: 24px 0 16px;
   line-height: 1.25;
-  text-align: center;
 }
 .cta-button {
+  background: linear-gradient(45deg, #ff7f50, #008080);
+  color: #fff;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.1em;
   display: inline-block;
-  margin-top: 10px; /* prevent overlap with slogan */
+  margin-top: 8px;
+}
+.cta-button:hover { opacity: 0.9; }
+
+/* Brand logo showcase (below CTA) */
+.brand-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 26px 0 10px;
+}
+.brand-logo {
+  width: 480px;
+  max-width: 90%;
+  height: auto;
+  display: block;
 }
 
-/* Horizontal services row */
+/* Page backgrounds */
+.soft-teal-bg {
+  background: linear-gradient(180deg, #eaf7f7 0%, #ffffff 60%);
+}
+
+/* Cards & Sections */
+.service-card {
+  background: #ffffff;
+  border: 2px solid #008080;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 .services-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -316,8 +124,67 @@ footer p {
   .services-row { grid-template-columns: 1fr; }
 }
 
-/* Light teal backgrounds on About & Services already set via .soft-teal-bg */
+/* Notes section (smaller text) */
+.notes {
+  font-size: 0.9em;
+  margin: 20px auto;
+  max-width: 800px;
+}
+hr {
+  border: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #008080, #ff7f50);
+  border-radius: 2px;
+  margin: 20px 0;
+}
 
-/* About page text colors */
+/* Gallery */
 .about-content p { color: #008080; line-height: 1.65; font-size: 1.05rem; }
-.about-content p strong, .about-content p em, .about-content p span.highlight { color: #ff7f50; }
+.about-content p strong, .about-content p em { color: #ff7f50; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 10px 0 30px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Forms */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.booking-form label { color: #008080; font-weight: bold; margin-top: 8px; }
+.booking-form input, .booking-form select, .booking-form textarea {
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+.booking-form button {
+  background: linear-gradient(45deg, #ff7f50, #008080);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+  background-color: #008080;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+footer p { margin: 0; }

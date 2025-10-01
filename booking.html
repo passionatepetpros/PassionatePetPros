@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking - Passionate Pet Pros</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Visit - Passionate Pet Pros, LLC</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="Passionate Pet Pros Logo" class="logo">
+    <img src="images/logo_header_60.png" alt="Passionate Pet Pros Logo" class="logo small-logo" />
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="booking.html">Booking</a>
+      <a href="booking.html">Request a Visit</a>
     </nav>
   </header>
+
   <main>
     <h1>Request a Visit</h1>
     <form action="https://formspree.io/f/mjkbqadp" method="POST" class="booking-form">
       <label for="name">Your Name:</label>
-      <input type="text" name="name" required>
+      <input type="text" name="name" required />
 
       <label for="email">Your Email:</label>
-      <input type="email" name="email" required>
+      <input type="email" name="email" required />
 
       <label for="phone">Phone Number:</label>
-      <input type="tel" name="phone">
+      <input type="tel" name="phone" />
 
       <label for="pet">Pet Type(s):</label>
-      <input type="text" name="pet">
+      <input type="text" name="pet" />
 
       <label for="service">Service Requested:</label>
       <select name="service">
@@ -40,7 +42,7 @@
       </select>
 
       <label for="date">Preferred Date/Time:</label>
-      <input type="text" name="date">
+      <input type="text" name="date" />
 
       <label for="message">Additional Notes:</label>
       <textarea name="message"></textarea>
@@ -48,8 +50,9 @@
       <button type="submit">Submit Request</button>
     </form>
   </main>
+
   <footer>
-    <p>© 2025 Passionate Pet Pros. All rights reserved.</p>
+    <p>© 2025 Passionate Pet Pros, LLC. All rights reserved.</p>
   </footer>
 </body>
 </html>
