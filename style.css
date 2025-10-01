@@ -63,11 +63,7 @@ main {
   padding: 20px;
 }
 
-h1, h2, h3 {
-  background: linear-gradient(45deg, #008080, #ff7f50);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 .service-card {
   background: #ffffff;
@@ -193,3 +189,78 @@ footer p {
   padding: 6px 10px;
   font-size: 0.95em;
 }
+
+
+/* Soft light teal gradient page background */
+.soft-teal-bg {
+  background: linear-gradient(180deg, #eaf7f7 0%, #ffffff 60%);
+}
+
+/* Hero typography updates */
+.site-title {
+  font-size: 3rem;
+  margin: 0.2em 0 0.1em;
+  color: #ffffff; /* white on gradient hero for contrast */
+  letter-spacing: 0.5px;
+}
+.tagline, .slogan {
+  margin: 0.2em 0;
+  font-size: 1.1rem;
+  color: #ffffff; /* solid white text (no gradient) */
+}
+
+/* Two images in hero */
+.hero-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 220px));
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 0 24px;
+}
+.hero-photos img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* About page text coloring (no gradient on text) */
+.about-content p {
+  color: #008080; /* teal paragraphs */
+  line-height: 1.65;
+  font-size: 1.05rem;
+}
+.about-content p strong, .about-content p em, .about-content p span.highlight {
+  color: #ff7f50; /* orange emphasis */
+}
+
+/* About page horizontal services row */
+.about-services-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+@media (max-width: 800px) {
+  .about-services-row { grid-template-columns: 1fr; }
+}
+.service-mini {
+  background: #ffffff;
+  border: 2px solid #008080;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.service-mini h3 {
+  margin-top: 0;
+  color: #008080; /* solid teal text */
+}
+.service-mini ul {
+  margin-left: 18px;
+  list-style: disc;
+}
+
+/* Footer copyright is already set globally in HTML */
