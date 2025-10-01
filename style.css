@@ -142,15 +142,7 @@ footer {
 footer p {
   margin: 5px 0;
 }
-footer::after {
-  content: 'Built on Passion, Backed by Trust';
-  display: block;
-  font-size: 0.9em;
-  background: linear-gradient(45deg, #ff7f50, #008080);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 5px;
-}
+
 
 .booking-form {
   display: flex;
@@ -190,4 +182,14 @@ footer::after {
 }
 .booking-form button:hover {
   opacity: 0.85;
+}
+
+
+/* Top contact bar (home page only) */
+.top-contact {
+  background-color: #008080;
+  color: #ffffff;
+  text-align: center;
+  padding: 6px 10px;
+  font-size: 0.95em;
 }
