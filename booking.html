@@ -1,83 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>New Client Booking • Passionate Pet Pros</title>
-<meta name="description" content="Florida-inspired pet sitting & walking with reliable, compassionate care for dogs, cats, and small pets." />
-<meta name="theme-color" content="#0fb9b1" />
-<link rel="canonical" href="https://yourusername.github.io/passionatepetpros/booking.html" />
-<link rel="stylesheet" href="style.css" />
-<link rel="icon" href="logo.png" type="image/svg+xml" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - Passionate Pet Pros</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <a href="index.html" class="brand">
-    <img src="logo.png" alt="Passionate Pet Pros logo" />
-    <span class="brand-text">Passionate Pet Pros</span>
-  </a>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a class="cta" href="booking.html">Book Now</a>
-  </nav>
-</header>
-<main class="content narrow">
-  <h1>New Client Booking Request</h1>
-  <p>Tell me about your pet and your schedule. I’ll follow up to confirm details and availability.</p>
+  <header>
+    <img src="images/logo.png" alt="Passionate Pet Pros Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Book a Visit</h1>
+    <form action="https://formspree.io/f/mjkbqadp" method="POST" class="booking-form">
+      <label for="name">Your Name:</label>
+      <input type="text" name="name" required>
 
-  <!-- Replace YOUR_FORMSPREE_ID with your Formspree endpoint (e.g., xayzabcd) -->
-  <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="form">
-    <label> Your Name
-      <input type="text" name="name" required placeholder="Jane Doe" />
-    </label>
-    <label> Email
-      <input type="email" name="email" required placeholder="you@example.com" />
-    </label>
-    <label> Phone
-      <input type="tel" name="phone" placeholder="+1 555 123 4567" />
-    </label>
-    <label> Address / Neighborhood
-      <input type="text" name="area" placeholder="Neighborhood / City" />
-    </label>
-    <label> Pet(s) & Details
-      <textarea name="pets" rows="3" placeholder="2 dogs (Luna 2y, Milo 5y). Friendly, leash-trained."></textarea>
-    </label>
-    <label> Service Type
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" name="phone">
+
+      <label for="pet">Pet Type(s):</label>
+      <input type="text" name="pet">
+
+      <label for="service">Service Requested:</label>
       <select name="service">
-        <option>Dog Walk (30 min)</option>
-        <option>Dog Walk (60 min)</option>
-        <option>Drop-In Visit (30 min)</option>
-        <option>Vacation Care</option>
+        <option>20 Minute Walk / Visit</option>
+        <option>30 Minute Walk / Visit</option>
+        <option>Overnight Care</option>
         <option>Other</option>
       </select>
-    </label>
-    <label> Preferred Dates / Times
-      <textarea name="times" rows="3" placeholder="e.g., M/W/F at 12:30pm for 3 weeks starting Oct 1"></textarea>
-    </label>
-    <label> Notes / Special Instructions
-      <textarea name="notes" rows="4" placeholder="Feeding schedule, meds, door code, etc."></textarea>
-    </label>
-    <input type="hidden" name="_subject" value="New Client Booking Request" />
-    <button class="btn primary" type="submit">Submit Request</button>
-  </form>
 
-  <div class="contact-alt">
-    <p><strong>Email:</strong> hello@passionatepetpros.com</p>
-    <p><strong>Phone:</strong> +1 (000) 000-0000</p>
-  </div>
-</main>
-<footer class="site-footer">
-  <p>© <span id="year"></span> Passionate Pet Pros. All rights reserved.</p>
-  <nav class="foot-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="booking.html">Booking</a>
-  </nav>
-</footer>
-<script src="script.js"></script>
+      <label for="date">Preferred Date/Time:</label>
+      <input type="text" name="date">
+
+      <label for="message">Additional Notes:</label>
+      <textarea name="message"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </main>
+  <footer>
+    <p>📧 passionatepetpros@gmail.com | 📱 (609) 273-3411</p>
+  </footer>
 </body>
 </html>
