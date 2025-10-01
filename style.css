@@ -264,3 +264,17 @@ footer p {
 }
 
 /* Footer copyright is already set globally in HTML */
+
+/* Horizontal layout for main service cards */
+.services-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+@media (max-width: 900px) {
+  .services-row {
+    grid-template-columns: 1fr;
+  }
+}
