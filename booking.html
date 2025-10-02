@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Request a Visit - Passionate Pet Pros, LLC</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="logo_header_60.png" alt="Passionate Pet Pros Logo" class="logo small-logo" />
+    <img src="images/logo_header_60.png" alt="Passionate Pet Pros Logo" class="logo small-logo" />
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -20,21 +20,29 @@
 
   <main>
     <h1>Request a Visit</h1>
-    <form action="https://formspree.io/f/mjkbqadp" method="POST" class="booking-form">
+    <form action="https://api.web3forms.com/submit" method="POST" class="booking-form">
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="e827eed5-0386-4a64-b454-b78f2015bc85" />
+
+      <!-- Meta -->
+      <input type="hidden" name="from_name" value="Passionate Pet Pros Website" />
+      <input type="hidden" name="subject" value="New Request a Visit Submission" />
+      <input type="hidden" name="redirect" value="thank-you.html" />
+
       <label for="name">Your Name:</label>
-      <input type="text" name="name" required />
+      <input id="name" type="text" name="name" required />
 
       <label for="email">Your Email:</label>
-      <input type="email" name="email" required />
+      <input id="email" type="email" name="email" required />
 
       <label for="phone">Phone Number:</label>
-      <input type="tel" name="phone" />
+      <input id="phone" type="tel" name="phone" />
 
       <label for="pet">Pet Type(s):</label>
-      <input type="text" name="pet" />
+      <input id="pet" type="text" name="pet" placeholder="Dog, cat, birds, etc." />
 
       <label for="service">Service Requested:</label>
-      <select name="service">
+      <select id="service" name="service">
         <option>20 Minute Walk / Visit</option>
         <option>30 Minute Walk / Visit</option>
         <option>Overnight Care</option>
@@ -42,10 +50,13 @@
       </select>
 
       <label for="date">Preferred Date/Time:</label>
-      <input type="text" name="date" />
+      <input id="date" type="text" name="date" placeholder="e.g., Fri 3–5pm" />
 
       <label for="message">Additional Notes:</label>
-      <textarea name="message"></textarea>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <!-- Spam honeypot -->
+      <input type="checkbox" name="botcheck" style="display:none">
 
       <button type="submit">Submit Request</button>
     </form>
